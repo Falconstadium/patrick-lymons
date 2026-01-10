@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+/* Gambetta */
+@font-face {
+  font-family: 'Gambetta';
+  src: url(../assets/fonts/gambetta/Gambetta-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Gambetta';
+  src: url(../assets/fonts/gambetta/Gambetta-Semibold.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Gambetta';
+  src: url(../assets/fonts/gambetta/Gambetta-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Gambetta';
+  src: url(../assets/fonts/gambetta/Gambetta-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Gambetta';
+  src: url(../assets/fonts/gambetta/Gambetta-Light.woff2);
+  font-weight: 300;
+}
+
+/* General-sans */
+@font-face {
+  font-family: 'General Sans';
+  src: url(../assets/fonts/general/GeneralSans-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'General Sans';
+  src: url(../assets/fonts/general/GeneralSans-Semibold.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'General Sans';
+  src: url(../assets/fonts/general/GeneralSans-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'General Sans';
+  src: url(../assets/fonts/general/GeneralSans-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'General Sans';
+  src: url(../assets/fonts/general/GeneralSans-Light.woff2);
+  font-weight: 300;
+}
+
+@theme {
+  --font-gambetta: 'Gambetta', system-ui;
+  --font-general: 'General Sans', system-ui;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+button {
+  cursor: pointer;
+}

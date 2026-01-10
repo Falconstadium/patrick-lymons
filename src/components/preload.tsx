@@ -1,0 +1,35 @@
+'use client';
+import gsap from 'gsap';
+import { useEffect, useRef } from 'react';
+
+export default function Preloader({ onComplete }) {
+  const loaderRef = useRef(null);
+
+  useEffect(() => {
+    const obj = { val: 0 };
+
+    gsap.to(obj, {
+      val: 100,
+      duration: 2,
+      ease: 'power2.out',
+      onComplete: () => {
+        gsap.to(loaderRef.current, {
+          y: '-100%',
+          duration: 1,
+          ease: 'power4.inOut',
+          onComplete,
+        });
+      },
+    });
+  }, [onComplete]);
+
+  return (
+    <div
+      ref={loaderRef}
+      className="fixed inset-0 z-9999 bg-[#FAF8F1] flex items-center justify-center">
+      <p className="text-sm font-bold tracking-wide animate-pulse font-general text-black uppercase">
+        Patrick Lyons
+      </p>
+    </div>
+  );
+}
