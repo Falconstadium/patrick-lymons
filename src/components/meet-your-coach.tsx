@@ -33,8 +33,8 @@ export default function About() {
       {/* Grid 1 */}
       <div className="w-full">
         <Image
-          src={'/hero-pic.png'}
-          alt="about-pic"
+          src={'/about-pic.png'}
+          alt="The about picture"
           width={300}
           height={200}
           className="object-cover object-top rounded-2xl w-72 h-full mx-auto"

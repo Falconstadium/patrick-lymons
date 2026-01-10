@@ -51,11 +51,11 @@ export default function Hero() {
       </div>
       <div className="mx-auto md:mx-0">
         <Image
-          src={'/about-pic.png'}
+          src={'/hero-pic.png'}
           width={300}
           height={200}
           loading="eager"
-          alt="image-hero"
+          alt="The hero picture"
           className="object-cover shadow rounded-xl h-full w-72"
         />
       </div>
