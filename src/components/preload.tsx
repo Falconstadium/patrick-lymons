@@ -2,7 +2,11 @@
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 
-export default function Preloader({ onComplete }) {
+type LoaderProps = {
+  onComplete: () => void;
+};
+
+export default function Preloader({ onComplete }: LoaderProps) {
   const loaderRef = useRef(null);
 
   useEffect(() => {
