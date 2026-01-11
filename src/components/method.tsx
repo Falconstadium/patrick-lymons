@@ -43,7 +43,7 @@ export default function Method() {
         <h2 className="font-semibold font-general text-3xl md:text-5xl">
           Real training for real results
         </h2>
-        <p className="text-sm md:text-base font-gambetta">
+        <p className="text-sm lg:text-base font-gambetta">
           No shortcuts. No gimmicks. Just honest work and a plan built
           specifically for you. I train the way I believe in, and my clients see
           it in the mirror.
@@ -69,13 +69,13 @@ export default function Method() {
       </div>
 
       {/* Grid 2 */}
-      <div className="mx-auto md:mx-0">
+      <div className="mx-auto md:mx-0 w-full md:w-80">
         <Image
           src={'/method-pic.png'}
           width={300}
           height={200}
-          alt="image-hero"
-          className="object-cover shadow rounded-xl h-96 w-full"
+          alt="The method picture"
+          className="object-cover object-top shadow rounded-xl h-full w-full"
         />
       </div>
     </section>

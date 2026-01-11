@@ -27,7 +27,7 @@ export default function Hero() {
           duration: 1,
           y: 100,
           autoAlpha: 0,
-          stagger: 0.05,
+          stagger: 0.1,
         });
       },
     });
@@ -35,28 +35,28 @@ export default function Hero() {
 
   return (
     <section
-      className="max-w-4xl mx-auto grid gap-8 place-content-center place-items-center md:grid-cols-2 px-4 py-8"
+      className="max-w-4xl mx-auto grid gap-8 lg:gap-0 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 px-4 py-12"
       ref={loaderRef}>
-      <div className="grid place-content-center place-items-center md:place-items-start gap-2 split">
-        <h1 className="font-semibold font-general text-4xl sm:text-5xl md:text-5xl lg:text-6xl w-48 md:w-60 lg:w-80 leading-none">
+      <div className="grid gap-4 place-items-center lg:place-items-start split">
+        <h1 className="font-semibold font-general text-4xl md:text-5xl lg:text-6xl">
           Transform your body, transform your life
         </h1>
         <p className="text-sm md:text-base font-gambetta">
-          I help busy people turn their fitness goals into reality. Your
-          transformation starts with a single conversation.
+          I help busy people turn their fitness goals into reality.
+          <br /> Your transformation starts with a single conversation.
         </p>
-        <p className="text-sm font-gambetta tracking-widest uppercase text-yellow-700">
+        <p className="text-sm font-gambetta font-medium uppercase text-yellow-700">
           6+ Years Coaching Experience
         </p>
       </div>
-      <div className="mx-auto md:mx-0">
+      <div className="mx-auto md:mx-0 w-full md:w-80">
         <Image
           src={'/hero-pic.png'}
           width={300}
           height={200}
           loading="eager"
           alt="The hero picture"
-          className="object-cover shadow rounded-xl h-full w-72"
+          className="object-cover object-top shadow rounded-xl h-full w-full"
         />
       </div>
     </section>

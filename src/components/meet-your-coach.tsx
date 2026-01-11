@@ -31,27 +31,27 @@ export default function About() {
       className="min-h-dvh grid gap-10 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 lg:gap-0 max-w-4xl mx-auto px-4 py-20"
       ref={aboutRef}>
       {/* Grid 1 */}
-      <div className="w-full">
+      <div className="mx-auto md:mx-0 w-full md:w-80">
         <Image
           src={'/about-pic.png'}
           alt="The about picture"
           width={300}
           height={200}
-          className="object-cover object-top rounded-2xl w-72 h-full mx-auto"
+          className="object-cover object-top shadow rounded-xl h-full w-full"
         />
       </div>
 
       {/* Grid 2 */}
       <div className="space-y-3">
         <div className="font-general">
-          <h1 className="text-xs text-neutral-500 font-medium">
+          <h1 className="text-xs xl:text-sm text-neutral-500 font-medium">
             Meet your coach
           </h1>
-          <h2 className="font-medium text-2xl md:text-4xl">
+          <h2 className="font-medium text-3xl md:text-5xl">
             Hi, I&apos;m Patrick
           </h2>
         </div>
-        <p className="font-gambetta text-sm">
+        <p className="font-gambetta text-sm lg:text-base">
           CEO of{' '}
           <a
             href="https://www.instagram.com/thelyonshred/"
@@ -66,7 +66,7 @@ export default function About() {
           beyond quick fixes—I focus on building strength, confidence, and
           long-term habits that fit seamlessly into your lifestyle.
         </p>
-        <p className="font-gambetta text-sm">
+        <p className="font-gambetta text-sm lg:text-base">
           My mission is simple: to empower busy individuals to achieve their
           fitness goals without sacrificing balance in their lives. Whether
           you’re stepping into the gym for the first time or looking to break
