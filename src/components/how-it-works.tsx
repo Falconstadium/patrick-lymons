@@ -20,7 +20,7 @@ export default function HowWorks() {
     ScrollTrigger.create({
       animation: tl,
       trigger: worksRef.current,
-      start: 'top 50%',
+      start: 'top 70%',
       end: 'bottom bottom',
       scrub: 1,
     });
@@ -28,27 +28,27 @@ export default function HowWorks() {
 
   return (
     <section
-      className="min-h-dvh grid gap-10 space-x-4 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 max-w-5xl mx-auto px-4 py-20"
+      className="min-h-dvh grid gap-10 space-x-4 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto px-4 py-20"
       ref={worksRef}>
       {/* Grid 1 */}
-      <div className="space-y-3">
-        <h1 className="font-general font-medium text-neutral-500 text-xs">
+      <div className="space-y-3 mx-auto md:mx-0">
+        <h1 className="font-general font-medium text-neutral-500 text-xs xl:text-sm">
           How it works
         </h1>
-        <h2 className="font-general font-semibold text-2xl md:text-5xl">
+        <h2 className="font-general font-semibold text-3xl md:text-5xl">
           Your path to lasting results
         </h2>
-        <p className="font-gambetta text-sm">
+        <p className="font-gambetta text-sm lg:text-base">
           Every transformation starts with structure. Here’s how we turn goals
           into real progress — one step at a time.
         </p>
-        <div>
+        <div className="w-full md:w-80">
           <Image
             src={'/howworks-pic.png'}
-            alt="img"
+            alt="how it works picture"
             width={300}
             height={200}
-            className="object-cover object-top rounded-2xl shadow w-full h-96 md:h-64 mt-6 mx-auto lg:mx-0"
+            className="object-cover object-top rounded-xl shadow w-full h-full md:h-60"
           />
         </div>
       </div>
@@ -73,23 +73,15 @@ export default function HowWorks() {
         </div>
         <div className="space-y-1 font-general">
           <span className="text-xs text-neutral-400">03</span>
-          <h3 className="font-medium text-lg md:text-xl">Weekly Coaching</h3>
-          <p className="font-gambetta text-sm">
-            We’ll explore your goals, challenges, and lifestyle to create the
-            right approach.
-          </p>
-        </div>
-        <div className="space-y-1 font-general">
-          <span className="text-xs text-neutral-400">04</span>
           <h3 className="font-medium text-lg md:text-xl">
             Lifestyle Integration
           </h3>
           <p className="font-gambetta text-sm">
-            We adapt your plan as your schedule, cycle, and needs shift
+            We adapt your plan as your schedule, lifestyle, and needs shift
           </p>
         </div>
         <div className="space-y-1 font-general">
-          <span className="text-xs text-neutral-400">05</span>
+          <span className="text-xs text-neutral-400">04</span>
           <h3 className="font-medium text-lg md:text-xl">Long-Term Balance</h3>
           <p className="font-gambetta text-sm">
             Progress doesn’t end here — we’ll refine, celebrate, and keep
