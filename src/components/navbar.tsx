@@ -19,7 +19,7 @@ export default function Navbar() {
         </h1>
         <a
           href="#contact"
-          className="rounded-md duration-300 py-2 px-5 bg-[#E63946] text-white transition-colors ease-in-out text-sm font-semibold font-general hover:bg-red-600">
+          className="rounded-md duration-300 py-2 px-5 bg-[#E63946] text-white transition-colors ease-in-out text-xs lg:text-sm font-medium font-general hover:bg-red-600">
           Contact me
         </a>
       </nav>
