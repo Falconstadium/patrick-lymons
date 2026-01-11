@@ -37,24 +37,18 @@ export default function Faq() {
   const faqs = [
     {
       id: 1,
-      question: 'What should I expect during my first session?',
+      question: 'How often should I train each week?',
       answer:
-        'Your first session is about clarity, not pressure. We’ll assess your goals, movement, and current fitness level, then start building a plan tailored to your body and lifestyle.',
+        'Clients train anywhere from 3-6 times per week, with the sweet spot being 5 for most clients',
     },
     {
       id: 2,
-      question: 'How often should I train each week?',
-      answer:
-        'Most clients see great results training 3–4 times per week. We’ll find the right balance so you progress consistently without burning out.',
-    },
-    {
-      id: 3,
       question: 'Is nutrition coaching included?',
       answer:
         'Yes. You’ll get practical, sustainable nutrition guidance that supports your training — no extreme diets, just habits that work long-term.',
     },
     {
-      id: 4,
+      id: 3,
       question: 'How long will it take to see results?',
       answer:
         'Most clients feel stronger and more confident within 2–4 weeks, with visible results in 6–12 weeks when consistent.',
@@ -72,15 +66,15 @@ export default function Faq() {
       className="min-h-[75dvh] grid gap-10 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto px-4 py-20"
       ref={faqRef}>
       {/* Grid 1 */}
-      <div className="space-y-4">
-        <h1 className="font-general text-xs font-semibold text-neutral-500">
+      <div className="space-y-3">
+        <h1 className="font-general text-xs xl:text-sm font-semibold text-neutral-500">
           FAQ
         </h1>
         <h2 className="font-general font-semibold text-3xl md:text-5xl">
           Frequently
           <br /> Asked Questions
         </h2>
-        <p className="font-gambetta text-sm">
+        <p className="font-gambetta text-sm lg:text-base">
           If you’re new here or wondering what to expect, these answers will
           guide you through how coaching works, what’s included, and how we
           tailor every plan to your needs.
@@ -108,12 +102,12 @@ export default function Faq() {
             </button>
 
             <div
-              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
                 openIndex === faq.id
                   ? 'max-h-96 opacity-100'
                   : 'max-h-0 opacity-0'
               }`}>
-              <p className="pb-6 px-4 text-neutral-500 font-gambetta text-sm split">
+              <p className="pb-6 px-4 text-neutral-700 font-gambetta text-sm split">
                 {faq.answer}
               </p>
             </div>
