@@ -28,7 +28,7 @@ export default function HowWorks() {
 
   return (
     <section
-      className="min-h-dvh grid gap-10 space-x-4 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto px-4 py-20"
+      className="min-h-dvh grid gap-10 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 max-w-5xl mx-auto px-4 py-20"
       ref={worksRef}>
       {/* Grid 1 */}
       <div className="space-y-3 mx-auto md:mx-0">

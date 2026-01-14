@@ -1,5 +1,3 @@
-'use client';
-
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -47,7 +45,8 @@ export default function Contact() {
         {/* Send Button */}
         <button
           onClick={() => window.open('https://ig.me/m/patricklyons', '_blank')}
-          className="text-white bg-[#E63946] font-medium font-general text-sm py-2 px-5 rounded-lg transition-colors shadow-lg hover:bg-red-600 active:bg-red-600">
+          aria-label="Send message on Instagram"
+          className=" bg-[#F9652F] font-medium font-general text-sm py-2 px-5 rounded-lg transition-colors shadow-lg hover:bg-orange-600 active:bg-orange-600">
           Send a Message
         </button>
       </div>

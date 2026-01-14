@@ -6,7 +6,9 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 py-14 bg-neutral-950 text-white">
+    <footer
+      className="border-t border-white/10 py-14 bg-neutral-950 text-white"
+      role="contentinfo">
       <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Brand */}
         <h3 className="font-bold font-gambetta">Patrick</h3>

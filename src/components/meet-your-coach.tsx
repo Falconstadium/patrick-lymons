@@ -28,7 +28,7 @@ export default function About() {
 
   return (
     <section
-      className="min-h-dvh grid gap-10 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 lg:gap-0 max-w-4xl mx-auto px-4 py-20"
+      className="min-h-dvh grid gap-10 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 lg:gap-0 max-w-5xl mx-auto px-4 py-20"
       ref={aboutRef}>
       {/* Grid 1 */}
       <div className="mx-auto md:mx-0 w-full md:w-80">
@@ -47,7 +47,7 @@ export default function About() {
           <h1 className="text-xs xl:text-sm text-neutral-500 font-medium">
             Meet your coach
           </h1>
-          <h2 className="font-medium text-3xl md:text-5xl">
+          <h2 className="font-semibold text-3xl md:text-5xl">
             Hi, I&apos;m Patrick
           </h2>
         </div>

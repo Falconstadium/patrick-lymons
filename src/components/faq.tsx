@@ -63,7 +63,7 @@ export default function Faq() {
 
   return (
     <section
-      className="min-h-[75dvh] grid gap-10 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto px-4 py-20"
+      className="min-h-[75dvh] grid gap-10 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 max-w-5xl mx-auto px-4 py-20"
       ref={faqRef}>
       {/* Grid 1 */}
       <div className="space-y-3">
