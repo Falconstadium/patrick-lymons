@@ -35,13 +35,14 @@ export default function Hero() {
 
   return (
     <section
-      className="max-w-4xl mx-auto grid gap-8 lg:gap-0 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 px-4 py-12"
+      className="max-w-5xl mx-auto grid gap-8 lg:gap-0 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 px-4 py-12"
       ref={loaderRef}>
+      {/* Grid 1 */}
       <div className="grid gap-4 place-items-center lg:place-items-start split">
         <h1 className="font-semibold font-general text-4xl md:text-5xl lg:text-6xl">
           Transform your body, transform your life
         </h1>
-        <p className="text-sm md:text-base font-gambetta">
+        <p className="text-sm lg:text-base font-gambetta">
           I help busy people turn their fitness goals into reality.
           <br /> Your transformation starts with a single conversation.
         </p>
@@ -49,11 +50,13 @@ export default function Hero() {
           6+ Years Coaching Experience
         </p>
       </div>
-      <div className="mx-auto md:mx-0 w-full md:w-80">
+
+      {/* Grid 2 */}
+      <div className="mx-auto md:mx-0 w-full md:w-96">
         <Image
-          src={'/hero-pic.png'}
+          src={'/patrick-pic.jpg'}
           width={300}
-          height={200}
+          height={400}
           loading="eager"
           alt="The hero picture"
           className="object-cover object-top shadow rounded-xl h-full w-full"
