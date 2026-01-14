@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: ['/opengraph-image.png'],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: './favicon.ico',
   },
 };
 
@@ -39,7 +39,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased bg-gray-50">
-        <SmoothScrollGSAP /> {children}
+        <SmoothScrollGSAP />
+        {children}
       </body>
     </html>
   );
