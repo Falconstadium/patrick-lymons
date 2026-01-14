@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Patrick Lyons",
   description: "Fitness Coach from Austin, Texas",
   keywords: [
-    "Patrick Lyons, Fitness coach in Austin, Fitness coach Texas, Fitness online coach",
+    "Patrick Lyons, Fitness coach in Austin, Fitness coach Texas, Fitness online coach, Fitness coach in the US",
   ],
   metadataBase: new URL("https://patrick-lymons.vercel.app/"),
   openGraph: {
