@@ -20,7 +20,7 @@ const data = [
     name: 'Aayush',
     testimonial:
       'Joining the Lyon Shred program has been a truly life-changing experience for me. As someone who was once extremely fragile and battling a brain tumor, I never imagined I would one day have the physique I always dreamed of. Building muscle seemed out of reach—but Lyon Shred proved me wrong',
-    link: 'https://www.instagram.com/p/DE3RoaUPvz6/',
+    link: 'https://www.instagram.com/p/DMQxhswvt10/?img_index=1',
     ariaLabel: "Read more about Aayush's testimonial",
   },
   {
