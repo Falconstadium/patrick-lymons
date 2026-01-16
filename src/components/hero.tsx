@@ -1,8 +1,8 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { SplitText } from 'gsap/SplitText';
-import Image from 'next/image';
-import { useRef } from 'react';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import Image from "next/image";
+import { useRef } from "react";
 
 export default function Hero() {
   const loaderRef = useRef<HTMLDivElement>(null);
@@ -15,12 +15,12 @@ export default function Hero() {
       autoAlpha: 0,
       stagger: 0.2,
       duration: 1,
-      ease: 'power1.out',
+      ease: "power1.out",
     });
 
-    SplitText.create('.split', {
-      type: 'lines, words',
-      mask: 'lines',
+    SplitText.create(".split", {
+      type: "lines, words",
+      mask: "lines",
       autoSplit: true,
       onSplit(self) {
         return gsap.from(self.lines, {
@@ -35,31 +35,34 @@ export default function Hero() {
 
   return (
     <section
-      className="max-w-5xl mx-auto grid gap-8 lg:gap-0 place-content-center place-items-center md:grid-cols-1 lg:grid-cols-2 px-4 py-12"
-      ref={loaderRef}>
+      className="mx-auto grid max-w-5xl place-content-center place-items-center gap-8 px-4 py-12 md:grid-cols-1 lg:grid-cols-2 lg:gap-0"
+      ref={loaderRef}
+    >
       {/* Grid 1 */}
-      <div className="grid gap-4 place-items-center lg:place-items-start split">
-        <h1 className="font-semibold font-general text-4xl md:text-5xl lg:text-6xl">
+      <div className="split grid place-items-center gap-4 lg:place-items-start">
+        <h1 className="font-general text-4xl font-semibold md:text-5xl lg:text-6xl">
           Transform your body, transform your life
         </h1>
-        <p className="text-sm lg:text-base font-gambetta">
-          I help busy people turn their fitness goals into reality.
-          <br /> Your transformation starts with a single conversation.
-        </p>
-        <p className="text-sm font-gambetta font-medium uppercase text-yellow-700">
-          6+ Years Coaching Experience
-        </p>
+        <div className="space-y-2">
+          <p className="font-gambetta text-sm lg:text-base">
+            I help busy people turn their fitness goals into reality. Your
+            transformation starts with a single conversation.
+          </p>
+          <p className="font-gambetta text-sm font-medium text-yellow-700 uppercase">
+            6+ Years Coaching Experience
+          </p>
+        </div>
       </div>
 
       {/* Grid 2 */}
-      <div className="mx-auto md:mx-0 w-full md:w-96">
+      <div className="mx-auto w-full md:mx-0 md:w-96">
         <Image
-          src={'/patrick-pic.jpg'}
+          src={"/patrick-pic.jpg"}
           width={300}
           height={400}
           loading="eager"
           alt="The hero picture"
-          className="object-cover object-top shadow rounded-xl h-full w-full"
+          className="h-full w-full rounded-xl object-cover object-top shadow"
         />
       </div>
     </section>
