@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 import { useRef, useState } from "react";
 
 const data = [
@@ -14,6 +15,7 @@ const data = [
       "I was looking for a change in my fitness routine, which wasn’t much at the time, and came across some of Patrick’s content and decided to reach out. I’m so glad I did! My wife and I both decided to kick off the new year with Patrick! If you are looking for a positive change in your lifestyle, the Lyon Shred is life changing!",
     link: "https://www.instagram.com/p/DE-yzuPPGoW/?img_index=1",
     ariaLabel: "Read more about Torey's testimonial",
+    image: "/torey1.jpg",
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const data = [
       "Joining the Lyon Shred program has been a truly life-changing experience for me. As someone who was once extremely fragile and battling a brain tumor, I never imagined I would one day have the physique I always dreamed of. Building muscle seemed out of reach—but Lyon Shred proved me wrong",
     link: "https://www.instagram.com/p/DMQxhswvt10/?img_index=1",
     ariaLabel: "Read more about Aayush's testimonial",
+    image: "/aayush.jpg",
   },
   {
     id: 3,
@@ -30,6 +33,7 @@ const data = [
       "My experience with the Lyon Shred was phenomenal. Patrick was incredibly attentive every step of the way. He customized all my workouts and my meals based on the goals I had in mind. I went from 187lbs to 174lbs and saw immense progress throughout my time working with Patrick",
     link: "https://www.instagram.com/p/DE3RoaUPvz6/",
     ariaLabel: "Read more about Matt's testimonial",
+    image: "/matt.jpg",
   },
   {
     id: 4,
@@ -38,6 +42,7 @@ const data = [
       "I’ve had the privilege of knowing Patrick since elementary school. He is one of the smartest and hardest working individuals I have ever met. I was able to see first hand his fitness journey and the work he put in to achieving his goals. He spent many hours physically and mentally changing his lifestyle and has now dedicated his life to helping others achieve their goals",
     link: "https://www.instagram.com/p/CmXDtb_uZ10/?img_index=1",
     ariaLabel: "Read more about Preston's testimonial",
+    image: "/preston.jpg",
   },
   {
     id: 5,
@@ -46,6 +51,7 @@ const data = [
       "Living a healthy and active lifestyle seems daunting, especially when the lifestyle you are accustomed to is the complete opposite. When I joined the Lyon Shred Community, I found a place that celebrated successes and understood failures. The program is customized, whether you have dietary restrictions or limited access to a fully equipped gym, Patrick works with you to create a plan that is sustainable and will move you toward your goals",
     link: "https://www.instagram.com/p/CdGZl42un4Z/?img_index=1",
     ariaLabel: "Read more about Zak's testimonial",
+    image: "/zak.jpg",
   },
 ];
 
@@ -125,7 +131,7 @@ export default function Testimonials() {
 
   return (
     <section
-      className="mx-auto grid min-h-[75dvh] max-w-4xl grid-cols-1 place-content-center place-items-center gap-8 px-4"
+      className="mx-auto grid min-h-dvh max-w-4xl grid-cols-1 place-content-center place-items-center gap-8 px-4 py-20 lg:py-12"
       ref={testimonialRef}
     >
       {/* Grid 1 */}
@@ -142,7 +148,7 @@ export default function Testimonials() {
       </div>
 
       {/* Grid 2 */}
-      <div className="mx-auto w-full max-w-xl space-y-2">
+      <div className="mx-auto w-full max-w-2xl space-y-2">
         {/* buttons */}
         <div className="flex items-center justify-end gap-2 pr-4">
           <button
@@ -170,7 +176,7 @@ export default function Testimonials() {
         </div>
         {product.map((testi) => (
           <div
-            className={`flex h-60 w-full flex-col justify-between space-y-4 rounded bg-neutral-50 px-4 py-3 shadow lg:h-36 ${
+            className={`flex w-full flex-col justify-between space-y-4 rounded bg-neutral-50 px-4 py-3 shadow lg:h-44 lg:flex-row lg:space-x-4 ${
               slide === testi.id ? "relative" : "hidden"
             } ${
               direction === "left"
@@ -182,21 +188,32 @@ export default function Testimonials() {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            <p className="font-gambetta text-sm">
-              {testi.testimonial.slice(0, 300)}...
-              <a
-                href={testi.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label=""
-                className="text-sm font-medium hover:underline active:underline"
-              >
-                Read more
-              </a>
-            </p>
-            <h5 className="font-general text-xs font-medium lg:text-sm">
-              {testi.name}
-            </h5>
+            <div className="space-y-3">
+              <h5 className="font-general text-sm font-medium lg:text-base">
+                {testi.name}
+              </h5>
+              <p className="font-gambetta text-sm">
+                {testi.testimonial.slice(0, 300)}...
+                <a
+                  href={testi.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label=""
+                  className="text-sm font-medium hover:underline active:underline"
+                >
+                  Read more
+                </a>
+              </p>
+            </div>
+            <div className="h-full w-full">
+              <Image
+                src={`${testi.image}`}
+                alt="image"
+                width={400}
+                height={400}
+                className="h-full w-full rounded object-cover"
+              />
+            </div>
           </div>
         ))}
         {/* Counter */}
