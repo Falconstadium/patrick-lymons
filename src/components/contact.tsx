@@ -44,7 +44,7 @@ export default function Contact() {
 
         {/* Send Button */}
         <a
-          href="https://ig.me/m/patricklyons"
+          href="https://www.instagram.com/patricklyons"
           target="_blank"
           rel="noopener noreferrer"
           className="font-general rounded-lg bg-[#F9652F] px-5 py-2 text-sm font-medium shadow-lg transition-colors hover:bg-orange-600 active:bg-orange-600"
