@@ -53,6 +53,69 @@ const data = [
     ariaLabel: "Read more about Zak's testimonial",
     image: "/zak.jpg",
   },
+  {
+    id: 6,
+    name: "Andrew",
+    testimonial:
+      "Working with Patrick through his Lyon Shred program has been one of the most rewarding experiences of my fitness journey. Over the course of the program, I went from 200 pounds to 190 pounds—all while maintaining the same level of strength. But what stood out to me even more than the results was the process. I genuinely looked forward to every workout. Patrick’s gym sessions are challenging, intentional, and always rooted in progress, not punishment.",
+    link: "https://www.instagram.com/p/DMOIlLLvsm6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    ariaLabel: "Read more about Andrew's testimonial",
+    image: "/andrew.jpg",
+  },
+  {
+    id: 7,
+    name: "Kelly",
+    testimonial:
+      "“In December (2023) my son asked, “what would you like for Christmas?” I said, “I would love an XL bath robe since none of mine fit me and I want it big enough to cover everything!” Christmas morning we all started exchanging gifts. When it was my turn my son reached for his laptop and opened it and hit “play”. I couldn’t believe my eyes! It was Patrick Lyons! (I knew exactly who Patrick was because my son went through his program and the results were amazing!!!) ",
+    link: "https://www.instagram.com/p/DFBVx2OP9GT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    ariaLabel: "Read more about Kelly's testimonial",
+    image: "/kelly.jpg",
+  },
+  {
+    id: 8,
+    name: "Chad",
+    testimonial:
+      "We finished the 13 weeks with my weight loss at ~32 pounds and my wife at ~20 pounds. Most people would look at what we did and say “I can do that on my own”. You could, but having a coach, partner, and cheerleader for the journey is the key to success. Patrick’s guidance was spot on, enthusiastic and comforting throughout the process. I can hear his voice everyday in the gym and when putting the next meal together.",
+    link: "https://www.instagram.com/p/DFBVx2OP9GT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    ariaLabel: "Read more about Chad's testimonial",
+    image: "/chad.jpg",
+  },
+  {
+    id: 9,
+    name: "Christian",
+    testimonial:
+      "I actually did notice a difference, mostly with how my clothes fit! I think the program’s great for people who don’t have a plan when they go to the gym. It also helps motivate you once you have a plan laid out, which is awesome. 5 months after starting the program: I haven’t eaten nearly as bad as I used to, and I’m still unconsciously making healthier decisions now.",
+    link: "https://www.instagram.com/p/DEnuX95vv2c/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    ariaLabel: "Read more about Christian's testimonial",
+    image: "/christian.jpg",
+  },
+  {
+    id: 10,
+    name: "Jonathen",
+    testimonial:
+      "Living a healthy and active lifestyle seems daunting, especially when the lifestyle you are accustomed to is the complete opposite. When I joined the Lyon Shred Community, I found a place that celebrated successes and understood failures. The program is customized, whether you have dietary restrictions or limited access to a fully equipped gym, Patrick works with you to create a plan that is sustainable and will move you toward your goals",
+    link: "https://www.instagram.com/p/DEdprxtvD5e/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    ariaLabel: "Read more about Jonathen's testimonial",
+    image: "/jonathenlazo.jpg",
+  },
+  {
+    id: 11,
+    name: "Grayson",
+    testimonial:
+      "For years I have been doing consistent weight training, but only recently had it really started to bother me that I wasn’t making progress. I couldn’t seem to figure out how to push myself. When I started Lyon Shred, I was gambling. Patrick wanted me to do the advanced program and show up to the gym 6 times a week. I followed his instructions and got what I was looking for. The program kicked my butt!",
+    link: "https://www.instagram.com/p/CbKy4jAOxnB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    ariaLabel: "Read more about Grayson's testimonial",
+    image: "/grayson.jpg",
+  },
+  {
+    id: 12,
+    name: "Jonathan",
+    testimonial:
+      "Although I’ve worked with other online coaches in the past, they were all just a one-and-done deal. After paying for and receiving a plan, there usually isn’t much more added value that followed. I always seemed like just another person in line making a purchase at a store; where after I’ve given my money and received my item, there was nothing else left in the relationship.",
+    link: "https://www.instagram.com/p/DEiiRhwvSnj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    ariaLabel: "Read more about Jonathan's testimonial",
+    image: "/Jonathan.jpg",
+  },
 ];
 
 export default function Testimonials() {
@@ -211,7 +274,7 @@ export default function Testimonials() {
                 alt="image"
                 width={400}
                 height={400}
-                className="h-full w-full rounded object-cover"
+                className="h-full w-full rounded object-cover shadow"
               />
             </div>
           </div>
