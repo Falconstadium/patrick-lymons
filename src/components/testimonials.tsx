@@ -93,7 +93,7 @@ const data = [
     id: 10,
     name: "Jonathen",
     testimonial:
-      "Living a healthy and active lifestyle seems daunting, especially when the lifestyle you are accustomed to is the complete opposite. When I joined the Lyon Shred Community, I found a place that celebrated successes and understood failures. The program is customized, whether you have dietary restrictions or limited access to a fully equipped gym, Patrick works with you to create a plan that is sustainable and will move you toward your goals",
+      "Jonathen was one of the winners of the first ever $1000 Lyon Shred Transformation contest back in 2020, and he is a testament to what is possible to achieve in 3-6 months.",
     link: "https://www.instagram.com/p/DEdprxtvD5e/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     ariaLabel: "Read more about Jonathen's testimonial",
     image: "/jonathenlazo.jpg",
@@ -256,7 +256,10 @@ export default function Testimonials() {
                 {testi.name}
               </h5>
               <p className="font-gambetta text-sm">
-                {testi.testimonial.slice(0, 300)}...
+                {testi.testimonial.length > 350
+                  ? testi.testimonial.slice(0, 300)
+                  : testi.testimonial}
+                ...
                 <a
                   href={testi.link}
                   target="_blank"
@@ -274,7 +277,7 @@ export default function Testimonials() {
                 alt="image"
                 width={400}
                 height={400}
-                className="h-full w-full rounded object-cover shadow"
+                className="h-full w-full rounded object-cover object-top shadow"
               />
             </div>
           </div>
