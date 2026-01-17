@@ -58,7 +58,7 @@ export default function About() {
             href="https://www.instagram.com/thelyonshred/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold underline"
+            className="font-semibold"
           >
             The Lyon Shred
           </a>{" "}

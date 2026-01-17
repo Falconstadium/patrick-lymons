@@ -43,7 +43,7 @@ export default function Hero() {
         <h1 className="font-general text-4xl font-semibold md:text-5xl lg:text-6xl">
           Transform your body, transform your life
         </h1>
-        <div className="space-y-2">
+        <div className="space-y-4 text-center lg:text-start">
           <p className="font-gambetta text-sm lg:text-base">
             I help busy people turn their fitness goals into reality. Your
             transformation starts with a single conversation.
