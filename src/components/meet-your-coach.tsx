@@ -9,23 +9,45 @@ export default function About() {
   const aboutRef = useRef(null);
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
-  useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.from(aboutRef.current, {
-      autoAlpha: 0,
-      y: 100,
-      stagger: 0.2,
-      ease: "power2.out",
-    });
+  useGSAP(
+    () => {
+      const tl = gsap.timeline();
+      tl.from(aboutRef.current, {
+        autoAlpha: 0,
+        y: 100,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
 
-    ScrollTrigger.create({
-      animation: tl,
-      trigger: aboutRef.current,
-      start: "top 50%",
-      end: "bottom bottom",
-      scrub: 1,
-    });
-  });
+      ScrollTrigger.create({
+        animation: tl,
+        trigger: aboutRef.current,
+        start: "top 40%",
+        end: "bottom bottom",
+        scrub: 1,
+      });
+
+      SplitText.create(".split", {
+        type: "lines, words",
+        mask: "lines",
+        autoSplit: true,
+        onSplit(self) {
+          return gsap.from(self.lines, {
+            scrollTrigger: {
+              trigger: aboutRef.current,
+              start: "top 50%",
+              end: "bottom bottom",
+            },
+            y: 100,
+            autoAlpha: 0,
+            duration: 1,
+            stagger: 0.05,
+          });
+        },
+      });
+    },
+    { scope: aboutRef },
+  );
 
   return (
     <section
@@ -44,14 +66,13 @@ export default function About() {
       </div>
 
       {/* Grid 2 */}
-      <div className="split space-y-3">
-        <h1 className="font-general text-xs font-medium text-neutral-500 xl:text-sm">
+      <div className="space-y-3">
+        <h1 className="font-general split text-xs font-medium text-neutral-500 xl:text-sm">
           Meet your coach
         </h1>
-        <h2 className="font-general text-3xl font-semibold md:text-5xl">
+        <h2 className="font-general split text-3xl font-semibold md:text-5xl">
           Hi, I&apos;m Patrick
         </h2>
-
         <p className="font-gambetta text-sm lg:text-base">
           CEO of{" "}
           <a
