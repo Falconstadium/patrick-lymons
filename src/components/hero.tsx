@@ -9,29 +9,32 @@ export default function Hero() {
 
   gsap.registerPlugin(SplitText);
 
-  useGSAP(() => {
-    gsap.from(loaderRef.current, {
-      y: 100,
-      autoAlpha: 0,
-      stagger: 0.2,
-      duration: 1,
-      ease: "power1.out",
-    });
+  useGSAP(
+    () => {
+      gsap.from(loaderRef.current, {
+        y: 100,
+        autoAlpha: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power1.out",
+      });
 
-    SplitText.create(".split", {
-      type: "lines, words",
-      mask: "lines",
-      autoSplit: true,
-      onSplit(self) {
-        return gsap.from(self.lines, {
-          duration: 1,
-          y: 100,
-          autoAlpha: 0,
-          stagger: 0.1,
-        });
-      },
-    });
-  });
+      SplitText.create(".split", {
+        type: "lines, words",
+        mask: "lines",
+        autoSplit: true,
+        onSplit(self) {
+          return gsap.from(self.lines, {
+            y: 100,
+            autoAlpha: 0,
+            duration: 1,
+            stagger: 0.05,
+          });
+        },
+      });
+    },
+    { scope: loaderRef },
+  );
 
   return (
     <section
@@ -39,19 +42,17 @@ export default function Hero() {
       ref={loaderRef}
     >
       {/* Grid 1 */}
-      <div className="split grid place-items-center gap-4 lg:place-items-start">
-        <h1 className="font-general text-4xl font-semibold md:text-5xl lg:text-6xl">
+      <div className="grid place-items-center gap-4 text-center lg:place-items-start lg:text-start">
+        <h1 className="font-general split text-4xl font-semibold md:text-5xl lg:text-6xl">
           Transform your body, transform your life
         </h1>
-        <div className="space-y-4 text-center lg:text-start">
-          <p className="font-gambetta text-sm lg:text-base">
-            I help busy people turn their fitness goals into reality. Your
-            transformation starts with a single conversation.
-          </p>
-          <p className="font-gambetta text-sm font-medium text-yellow-700 uppercase">
-            6+ Years Coaching Experience
-          </p>
-        </div>
+        <p className="font-gambetta split text-sm lg:text-base">
+          I help busy people turn their fitness goals into reality. Your
+          transformation starts with a single conversation.
+        </p>
+        <p className="font-gambetta split text-sm font-medium text-yellow-700 uppercase">
+          6+ Years Coaching Experience
+        </p>
       </div>
 
       {/* Grid 2 */}
